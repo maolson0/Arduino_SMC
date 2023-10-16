@@ -1,0 +1,38 @@
+The file solar_metric_clock.ino contains the source code for the Arduino solar metric clock I built.
+The code I run on my clock is actually managed by the Arduino IDE on my laptop and not synced to this
+github repository, though I can move changes back and forth manually. I've posted this version for
+friends who want to update their clocks' code without my manual intervention.
+
+In order to use this code, you need to set several constants: Local DST rules for your location, your
+timezone, your wifi SSID and password and your longitude. Search the code for the string "XXX SET" to
+find the places where those constants are defined. I have organized the code into blocks corresponding
+to the modules it relies on, and the constants are defined the blocks for their respective modules.
+
+You'll need these libraries installed in your Arduino IDE in order to build and upload the binary to
+your clock:
+
+WifiNINA_Generic: https://github.com/khoih-prog/WiFiNINA_Generic
+Adafruit GFX: https://github.com/adafruit/Adafruit-GFX-Library
+Adafruit LED Backpack: https://github.com/adafruit/Adafruit_LED_Backpack
+TimeLib: https://playground.arduino.cc/Code/Time/
+DS3231 real-time clock: https://github.com/NorthernWidget/DS3231
+Timezone_Generic: https://github.com/khoih-prog/Timezone_Generic
+
+Most of those should be installable directly from the Libraries tab on the right-hand side of the
+Arduino IDE. Some may have dependencies and pull in other libraries -- it's so long ago that I installed
+them that I don't remember.
+
+The one that isn't managed nicely by the Libraries tab is the Timezone_Generic library. You need to
+download and install that version from a .zip file. Navigate to this page
+
+https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries
+
+and scroll down about halfway for instructions on doing that. Some additional hints here:
+
+https://github.com/khoih-prog/Timezone_Generic#manual-install
+
+I use the on-laptop version of the Arduino IDE, not the cloud version, so these instructions may be
+peculiar to my installation. Let me know if you have trouble or questions.
+
+Code is distributed under the three-clause BSD license; do what thou wilt shall be the whole of the law.
+If you do make improvements, I'd welcome a note or pull request!
